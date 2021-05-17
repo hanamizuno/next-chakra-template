@@ -13,6 +13,7 @@
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "prettier"
   ],
+  "ignorePatterns": ["jest.config.js", "next.config.js"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "sourceType": "module",
