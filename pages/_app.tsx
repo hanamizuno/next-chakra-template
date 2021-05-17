@@ -1,11 +1,24 @@
+import React from "react"
 import { AppProps } from "next/app"
-import { ChakraProvider, extendTheme } from "@chakra-ui/react"
+import { ChakraProvider, ColorMode, extendTheme, theme } from "@chakra-ui/react"
 
-const theme = extendTheme({})
+const config: { initialColorMode: ColorMode; useSystemColorMode: boolean } = {
+  initialColorMode: "light",
+  useSystemColorMode: true,
+}
 
-function App({ Component, pageProps }: AppProps) {
+const customTheme = extendTheme({
+  config,
+  colors: {
+    primary: theme.colors.red,
+  },
+})
+
+export { customTheme as theme }
+
+function App({ Component, pageProps }: AppProps): React.ReactElement {
   return (
-    <ChakraProvider theme={theme}>
+    <ChakraProvider theme={customTheme}>
       <Component {...pageProps} />
     </ChakraProvider>
   )
