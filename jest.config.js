@@ -1,7 +1,7 @@
 module.exports = {
   preset: "ts-jest",
   testEnvironment: "node",
-  roots: ["<rootDir>"],
+  roots: ["<rootDir>/components", "<rootDir>/pages"],
   setupFilesAfterEnv: ["<rootDir>/test/setupTests.ts"],
   testPathIgnorePatterns: ["<rootDir>/.next/", "<rootDir>/node_modules/"],
   snapshotSerializers: ["enzyme-to-json/serializer"],
