@@ -1,4 +1,3 @@
-import React from "react"
 import {
   Box,
   Button,
@@ -11,6 +10,7 @@ import {
   Text,
   useColorModeValue,
 } from "@chakra-ui/react"
+import React from "react"
 
 export default function Header({
   logo,
@@ -58,6 +58,7 @@ export default function Header({
             Sign In
           </Button>
           <Button
+            as="a"
             fontSize="sm"
             fontWeight="600"
             bg="primary.500"
